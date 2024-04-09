@@ -6,5 +6,5 @@ interface IProps {
 }
 
 export default function Hero({ params: { id } }: IProps) {
-    return <h1>Spider-man</h1>
+    return <h1>Spider-man: {id}</h1>
 }

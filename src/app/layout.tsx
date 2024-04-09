@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import "./globals.scss"
+import Link from 'next/link'
 
 
 export const metadata: Metadata = {
@@ -23,13 +24,16 @@ export default function RootLayout({
           width={36}
           height={25}
           />
-          <Image 
-          src="/spider-logo.svg"
-          alt='Spiderman logo'
-          width={260}
-          height={70}
-          priority
-          />
+          <Link href="/">
+            <Image 
+            src="/spider-logo.svg"
+            alt='Spiderman logo'
+            width={260}
+            height={70}
+            priority
+            />
+          </Link>
+          
           <Image 
           src="/icons/user.svg"
           alt="Login"
