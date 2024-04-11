@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Fragment } from "react"
 
 import HeroPicture from "../HeroPicture";
 
@@ -17,7 +18,7 @@ interface IProps {
 
 export default function HeroesList({ heroes }: IProps){
     return (
-        <>
+        <Fragment>
             <motion.h1 
                 className={`${spidermanFont.className} ${styles.title}`}
                 initial={{ opacity: 0}}
@@ -45,6 +46,6 @@ export default function HeroesList({ heroes }: IProps){
                     </motion.div>
                 ))}
             </motion.section>
-        </>  
+        </Fragment>  
     );
 }
