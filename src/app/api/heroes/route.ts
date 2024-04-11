@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
 
+import JSONData from "./heroes.json";
+
 export async function GET(){
-    const res = await fetch(`${process.env.API_URL}/api/heroes`);
+    let res = await fetch(`${process.env.API_URL}/api/heroes`);
 
-    const data = await res.json();
+    let data = await res.json();
 
-    return NextResponse.json({ data })
+    if (!data) {
+        data = JSONData;
+      }
+
+    return NextResponse.json({ data });
 }
